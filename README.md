@@ -21758,7 +21758,7 @@ function renderProviderServices(services) {
       </div>
       <div class="service-details">
         <h4>${service.name}</h4>
-        <p class="service-description">${service.description}</p>
+        <p class="provider-service-description">${service.description}</p>
         <div class="service-pricing">
           <span class="service-price">${service.price}</span>
         </div>
@@ -22739,11 +22739,12 @@ function addProviderPageStyles() {
   font-size: 1.1em;
 }
 
-.service-description {
-  color: #000;
-  font-size: 0.9em;
-  margin: 0 0 12px;
-}
+.provider-service-description { 
+ color: #000;
+ font-size: 0.9em;
+ margin: 0 0 12px;
+ display: block !important; /* Ensure it's always visible */
+ }
 
 .service-pricing {
   display: flex;
@@ -22770,44 +22771,46 @@ function addProviderPageStyles() {
   background: #f9f9f9;
 }
 
-.service-actions {
-  display: flex;
-  gap: 10px;
-}
+    .service-actions {
+      display: flex;
+      gap: 10px;
+    }
 
-.add-to-booking-cart,
-.book-now {
-  flex: 1;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-}
+    .add-to-booking-cart,
+    .book-now {
+      font-family: poppins;
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
 
-.add-to-booking-cart {
-  background: #f5f5f5;
-  color: #333;
-}
+    .add-to-booking-cart {
+      background: #f5f5f5;
+      color: #333;
+    }
 
-.add-to-booking-cart:hover {
-  background: #e0e0e0;
-}
+    .add-to-booking-cart:hover {
+      background: #e0e0e0;
+    }
 
-.book-now {
-  background: #ffd700;
-  color: #000;
-}
+    .book-now {
+      font-family: poppins;
+      background: #ed2939;
+      color: #fff;
+    }
 
-.book-now:hover {
-  background: #ffc400;
-}
-
+   .book-now:hover {
+      background: #4169E1	;
+    }
+        
 .provider-facilities-section {
   padding: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
